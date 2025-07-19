@@ -1,0 +1,18 @@
+{
+  "name": "voltz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purge": "npx purgecss --css ./assets/css/core.css --content ./index.html -o ./assets/css/style.css",
+    "build": "npm run purge && echo \"✅ CSS purgado gerado! Redução de 1.2MB para poucos KB\"",
+    "dev": "npm run purge && echo \"🚀 Desenvolvimento - CSS otimizado!\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "purgecss": "^7.0.2"
+  }
+}

@@ -1,0 +1,38 @@
+/* <integer> values */
+
+/* Global values */
+
+@media screen and (max-width: 599px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 600px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1024px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1440px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1920px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
