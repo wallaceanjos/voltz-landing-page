@@ -1,0 +1,75 @@
+/*	================================
+	FONTES
+	================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+/*	--------------------------------
+	FONTES INTER
+	-------------------------------- */
+
+html {
+	font-family: 'Inter', sans-serif;
+}
+
+.text-xs {
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+
+.text-sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.text-base {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+p {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+h6,
+.heading-h6 {
+	font-size: 1.125rem; /* == 18px */
+	line-height: 1.75rem;
+}
+
+h5,
+.heading-h5 {
+	font-size: 1.25rem; /* == 20px */
+	line-height: 1.75rem;
+}
+
+h4,
+.heading-h4 {
+	font-size: 1.5rem; /* == 24px */
+	line-height: 2rem;
+}
+
+h3,
+.heading-h3 {
+	font-size: 1.875rem; /* == 30px */
+	line-height: 2.25rem;
+}
+
+h2,
+.heading-h2 {
+	font-size: 2.25rem; /* == 36px */
+	line-height: 2.5rem;
+}
+
+h1,
+.heading-h1 {
+	font-size: 3rem; /* == 48px */
+	line-height: auto;
+}
+
+span.highlight {
+	background-color: var(--primary);
+	color: var(--primary-contrast);
+	padding: 0px 8px;
+	border-radius: 8px;
+}

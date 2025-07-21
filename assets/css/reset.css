@@ -1,0 +1,46 @@
+/* reset */
+*,:before,:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+p,
+ul,
+ol,
+li,
+span {
+	margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.parallax{
+    background-attachment:unset;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (min-width: 1024px) {
+    .parallax{
+        background-attachment: fixed;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -1,13 +1,164 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./assets/css/style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./assets/css/main.css" rel="stylesheet">
+
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+	<section class="p-16">
+		<div class="flex-column">
+			<div class="max-w-1200 mx-auto w-100-p">
+				<div class="flex-row flex-between">
+					<img src="./assets/images/voltz-logo-full.png" alt="Voltz" class="d-none d-md-block w-128 h-48">
+					<img src="./assets/images/voltz-logo-circle.png" alt="Voltz" class="d-block d-md-none w-48 h-48">
+					<button id="btnCTA1" class="button-lg outline primary fw-500">Quero a Voltz na minha região</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-16">
+		<div class="flex-column">
+			<div class="max-w-1200 mx-auto w-100-p">
+				<h1 class="text-center fw-900 m-0 fs-32 fs-md-48">
+					Impulsione o comércio local com a Voltz
+				</h1>
+				<p class="text-center">
+					Descontos &bull; Prêmios &bull; Clientes fiéis &bull; Venda mais
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-16">
+		<div class="flex-column">
+			<div class="max-w-1200 mx-auto w-100-p">
+				<div class="grid-2 grid-lg-3">
+					<div
+						class="colspan-2 colspan-lg-1 p-16 order-0 order-lg-1 w-100-p w-lg-auto flex-center">
+						<img src="./assets/images/Illustration-desktop.svg" alt="Consumidores"
+							class="d-none d-lg-block">
+						<img src="./assets/images/Illustration-mobile.svg" alt="Consumidores"
+							class="d-block d-lg-none w-100-p max-w-500">
+					</div>
+
+					<div class="p-16 order-1 order-lg-0 flex-column flex-md-center-center flex-align-center text-center gap-16">
+						<div class="bg-warning w-100 h-16 radius-full"></div>
+						<h3 class="fs-24 fs-md-32">Consumidores</h3>
+						<div class="flex-column">
+							<p class="fs-16 fs-md-20">&bull; Ganhe cashback</p>
+							<p class="fs-16 fs-md-20">&bull; Concorra a prêmios</p>
+							<p class="fs-16 fs-md-20">&bull; Aproveite promoções</p>
+							<p class="fs-16 fs-md-20">&bull; Mais energia para o seu dinheiro</p>
+						</div>
+					</div>
+
+					<div class="p-16 order-2 order-lg-2 flex-column flex-center-center text-center gap-16">
+						<div class="bg-secondary w-100 h-16 radius-full"></div>
+						<h3 class="fs-24 fs-md-32">Lojistas</h3>
+						<div class="flex-column">
+							<p class="fs-16 fs-md-20">&bull; Ganhe competitividade contra vendas online</p>
+							<p class="fs-16 fs-md-20">&bull; Fidelize clientes</p>
+							<p class="fs-16 fs-md-20">&bull; Aproveite o anúncio estratégico</p>
+							<p class="fs-16 fs-md-20">&bull; Mais energia para o comércio local</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="p-16 pb-64">
+		<div class="flex-column">
+			<div class="max-w-1200 mx-auto w-100-p flex-center">
+				<button id="btnCTA2" class="button-lg secondary">Quero a Voltz na minha região</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="contato" class="p-16 bg-light">
+		<div class="flex-column">
+			<div class="max-w-1200 mx-auto w-100-p flex-column gap-16">
+				<div class="flex-column flex-md-row flex-md-wrap flex-align-center flex-center flex-md-start text-center text-md-left gap-16 gap-md-40 py-32">
+					<h1 class="fs-32 fs-md-48">
+						<span class="highlight">Fale com a gente</span>
+					</h1>
+
+					<p class="max-w-400 fs-18 fw-400">
+						Seu contato é o primeiro passo para transformar o seu comércio local.
+					</p>
+				</div>
+
+				<div class=" radius-24">
+					<form class="bg-white p-32 radius-24" action="#" method="POST">
+
+
+
+
+						<!-- Nome -->
+						<div class="form-group">
+							<label for="nome" class="required">
+								Nome Completo
+							</label>
+							<input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required
+								maxlength="100">
+						</div>
+
+						<!-- Email -->
+						<div class="form-group">
+							<label for="email" class="required">
+								E-mail
+							</label>
+							<input type="email" id="email" name="email" placeholder="seu@email.com" required
+								maxlength="100">
+						</div>
+
+						<!-- Celular -->
+						<div class="form-group">
+							<label for="celular" class="required">
+								Celular
+							</label>
+							<input type="tel" id="celular" name="celular" placeholder="(11) 99999-9999" required
+								maxlength="15">
+						</div>
+
+						<!-- Botões -->
+						<div class="flex-row gap-16 flex-wrap">
+							<button type="submit" class="button-xl primary w-100-p w-md-auto">
+								Enviar Mensagem <span class="i-voltz-send ml-8 lh-28 w-28 h-28"></span>
+							</button>
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Overlay e Modal de Status -->
+	<div id="statusOverlay" class="status-overlay bg-secondary-50 hidden">
+		<div class="status-modal bg-white border-radius-16 p-32">
+			<div class="text-center">
+				<div class="status-icon mb-16">
+					<div class="loading-spinner"></div>
+				</div>
+				<h3 id="statusTitle" class="text-primary mb-16">Enviando...</h3>
+				<p id="statusMessage" class="text-gray-600">Por favor, aguarde enquanto processamos sua mensagem.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript Modules -->
+	<script src="./assets/js/form-mask.js"></script>
+	<script src="./assets/js/modal.js"></script>
+	<script src="./assets/js/scroll.js"></script>
+	<script src="./assets/js/app.js"></script>
 </body>
+
 </html>

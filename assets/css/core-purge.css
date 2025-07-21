@@ -1,0 +1,105 @@
+.w-100-p {
+	width: 100%;
+}
+
+.max-w-1200 {
+	max-width: 1200px;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+
+.mb-32 {
+	margin-bottom: 32px;
+}
+
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.p-16 {
+	padding: 16px;
+}
+
+.py-64 {
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+
+.p-16 {
+	padding: 16px;
+}
+
+.py-64 {
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+
+.gap-16 {
+	column-gap: 16px;
+	row-gap: 16px;
+}
+
+/* <integer> values */
+
+/* Global values */
+
+@media screen and (max-width: 599px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 600px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1024px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1440px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+@media screen and (min-width: 1920px) {
+  /* <integer> values */
+  /* Global values */
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text-center {
+	text-align: center;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

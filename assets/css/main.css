@@ -1,0 +1,14 @@
+@import "./colors.css";
+@import "./reset.css";
+@import "./icons.css";
+@import "./forms.css";
+@import "./tipography.css";
+@import "./buttons.css";
+@import "./modal.css";
+
+/* PROD */
+/* npm run build */
+/* @import "./core-purge.css"; */
+
+/* DEV */
+@import "./core.css";

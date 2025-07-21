@@ -181,7 +181,7 @@
         padding: 10px 12px;
         font-size: 16px; /* Evita zoom no iOS */
     }
-    
+
     .wpcf7-form input[type="submit"],
     .wpcf7-form button[type="submit"] {
         width: 100%;
@@ -260,4 +260,117 @@
 .bg-dark .wpcf7-form textarea:focus {
     background-color: rgba(255, 255, 255, 0.2);
     border-color: #0073aa;
+}
+
+/* =============================================================================
+   FORMULÁRIOS HTML PADRÃO - ESTILOS PERSONALIZADOS
+   ============================================================================= */
+
+/* Estilos para inputs e textarea padrão */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(99, 111, 120, 0.1);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Estados de erro */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+/* Estados de sucesso */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: var(--success);
+}
+
+/* Textarea específico */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Responsividade para formulários */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+        padding: 14px 16px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+}
+
+/* Classes utilitárias para formulários */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-error {
+    color: var(--danger);
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-success {
+    color: var(--success);
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Indicadores de campo obrigatório */
+.required::after {
+    content: " *";
+    color: var(--danger);
 }

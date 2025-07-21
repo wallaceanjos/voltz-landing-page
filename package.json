@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "purge": "npx purgecss --css ./assets/css/core.css --content ./index.html -o ./assets/css/style.css",
+    "purge": "npx purgecss --css ./assets/css/core.css --content ./index.html -o ./assets/css/core-purge.css",
     "build": "npm run purge && echo \"✅ CSS purgado gerado! Redução de 1.2MB para poucos KB\"",
     "dev": "npm run purge && echo \"🚀 Desenvolvimento - CSS otimizado!\""
   },
