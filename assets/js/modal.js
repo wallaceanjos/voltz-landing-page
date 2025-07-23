@@ -37,10 +37,6 @@ function initModal() {
                 first_name: formData.get('first_name'),
                 last_name: formData.get('last_name'),
                 email: formData.get('email'),
-                company: formData.get('company'),
-                employee_count: formData.get('employee_count'),
-                industry: formData.get('industry'),
-                project_type: formData.get('project_type'),
                 phone: formData.get('phone')
             };
 
