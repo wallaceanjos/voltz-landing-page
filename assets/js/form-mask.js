@@ -1,11 +1,4 @@
-/**
- * FORM MASK - Sistema de máscara para campos do formulário
- */
 
-/**
- * Aplica máscara ao campo de telefone celular
- * @param {HTMLElement} telefone - Elemento input do telefone
- */
 function mascaraCelular(telefone) {
     const texto = telefone.value;
     const apenasNumeros = texto.replace(/\D/g, '').substring(0, 11);
@@ -23,7 +16,7 @@ function mascaraCelular(telefone) {
 
     telefone.value = numeroFormatado;
 
-    // Valida se tem 15 caracteres (incluindo formatação)
+
     if (numeroFormatado.length < 15) {
         telefone.setCustomValidity('O número de telefone deve estar completo');
     } else {
@@ -31,20 +24,17 @@ function mascaraCelular(telefone) {
     }
 }
 
-/**
- * Inicializa a máscara de celular
- */
 function initFormMask() {
-    const celular = document.getElementById('celular');
+    const phone = document.getElementById('phone');
 
-    if (celular) {
-        // Aplicar máscara conforme digita
-        celular.addEventListener('input', function () {
+    if (phone) {
+
+        phone.addEventListener('input', function () {
             mascaraCelular(this);
         });
 
-        // Permitir apenas números
-        celular.addEventListener('keypress', function (e) {
+
+        phone.addEventListener('keypress', function (e) {
             if (!e.key.match(/[0-9]/)) {
                 e.preventDefault();
             }

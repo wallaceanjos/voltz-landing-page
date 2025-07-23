@@ -1,10 +1,4 @@
-/**
- * MODAL SYSTEM - Sistema de modais para feedback de status
- */
 
-/**
- * Inicializa o sistema de modal de status do formulário
- */
 function initModal() {
     const form = document.querySelector('form');
     const overlay = document.getElementById('statusOverlay');
@@ -17,55 +11,86 @@ function initModal() {
         return;
     }
 
-    // Event listener para submissão do formulário
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Impede o envio real do formulário
+        e.preventDefault();
 
-        // Verifica se o formulário é válido
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        showModal();
+        submitForm(form);
     });
 
-    // Event listener para fechar modal clicando no overlay
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
             hideModal();
         }
     });
 
-    /**
-     * Exibe o modal com estado de loading e depois sucesso
-     */
-    function showModal() {
-        // Exibe o overlay
-        overlay.classList.remove('hidden');
+    async function submitForm(form) {
+        showLoadingModal();
 
-        // Estado inicial - enviando
+        try {
+            const formData = new FormData(form);
+            const data = {
+                first_name: formData.get('first_name'),
+                last_name: formData.get('last_name'),
+                email: formData.get('email'),
+                company: formData.get('company'),
+                employee_count: formData.get('employee_count'),
+                industry: formData.get('industry'),
+                project_type: formData.get('project_type'),
+                phone: formData.get('phone')
+            };
+
+            const response = await fetch('https://yuwdzuuos4r7wwz3lm6nipmrpu0opiza.lambda-url.us-east-2.on.aws/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                showSuccessModal();
+                form.reset();
+            } else {
+                throw new Error(`Erro HTTP: ${response.status}`);
+            }
+        } catch (error) {
+            console.error('Erro ao enviar formulário:', error);
+            showErrorModal();
+        }
+    }
+
+    function showLoadingModal() {
+        overlay.classList.remove('hidden');
         statusTitle.textContent = 'Enviando...';
         statusMessage.textContent = 'Por favor, aguarde enquanto processamos sua mensagem.';
         statusIcon.innerHTML = '<div class="loading-spinner"></div>';
-
-        // Após 2 segundos, muda para sucesso
-        setTimeout(function() {
-            statusTitle.textContent = 'Enviado!';
-            statusMessage.textContent = 'Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.';
-            statusIcon.innerHTML = '<div class="success-icon">✓</div>';
-
-            // Fecha o modal após mais 2 segundos
-            setTimeout(function() {
-                hideModal();
-                form.reset(); // Limpa o formulário
-            }, 2000);
-        }, 2000);
     }
 
-    /**
-     * Esconde o modal
-     */
+    function showSuccessModal() {
+        statusTitle.textContent = 'Enviado!';
+        statusMessage.textContent = 'Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.';
+        statusIcon.innerHTML = '<div class="success-icon">✓</div>';
+
+        setTimeout(function() {
+            hideModal();
+        }, 3000);
+    }
+
+    function showErrorModal() {
+        statusTitle.textContent = 'Erro ao enviar!';
+        statusMessage.textContent = 'Ocorreu um erro ao enviar sua mensagem. Tente novamente em alguns minutos.';
+        statusIcon.innerHTML = '<div class="error-icon">✗</div>';
+
+        setTimeout(function() {
+            hideModal();
+        }, 4000);
+    }
+
     function hideModal() {
         overlay.classList.add('hidden');
     }

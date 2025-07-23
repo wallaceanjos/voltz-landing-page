@@ -1,11 +1,53 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="./assets/css/main.css" rel="stylesheet">
+	<meta name="description" content="Impulsione o comércio local com a Voltz. Descontos, prêmios, clientes fiéis e mais vendas para seu negócio.">
+	<meta name="keywords" content="Voltz, comércio local, cashback, prêmios, fidelização, e-commerce, descontos, loja, varejo">
+	<meta name="author" content="Voltz">
 
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+
+	<!-- Android Chrome Icons -->
+	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/android-chrome-512x512.png">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://voltz.com.br/">
+	<meta property="og:title" content="Voltz - Impulsione o comércio local">
+	<meta property="og:description" content="Impulsione o comércio local com a Voltz. Descontos, prêmios, clientes fiéis e mais vendas para seu negócio.">
+	<meta property="og:image" content="./assets/images/og-voltz.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:site_name" content="Voltz">
+	<meta property="og:locale" content="pt_BR">
+
+	<!-- Twitter Card -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://voltz.com.br/">
+	<meta property="twitter:title" content="Voltz - Impulsione o comércio local">
+	<meta property="twitter:description" content="Impulsione o comércio local com a Voltz. Descontos, prêmios, clientes fiéis e mais vendas para seu negócio.">
+	<meta property="twitter:image" content="./assets/images/og-voltz.png">
+
+	<!-- Theme Color -->
+	<meta name="theme-color" content="#00ffaa">
+	<meta name="msapplication-TileColor" content="#00ffaa">
+
+	<!-- Manifest para PWA -->
+	<link rel="manifest" href="./site.webmanifest">
+
+	<link href="./assets/css/main.css" rel="stylesheet">
+	<title>Voltz - Impulsione o comércio local</title>
 </head>
 
 <body>
@@ -99,11 +141,20 @@
 
 						<!-- Nome -->
 						<div class="form-group">
-							<label for="nome" class="required">
-								Nome
+							<label for="first_name" class="required">
+								Primeiro Nome
 							</label>
-							<input type="text" id="nome" name="nome" placeholder="Nome" required
-								maxlength="100">
+							<input type="text" id="first_name" name="first_name" placeholder="João" required
+								maxlength="50">
+						</div>
+
+						<!-- Sobrenome -->
+						<div class="form-group">
+							<label for="last_name" class="required">
+								Sobrenome
+							</label>
+							<input type="text" id="last_name" name="last_name" placeholder="Silva" required
+								maxlength="50">
 						</div>
 
 						<!-- Email -->
@@ -115,12 +166,75 @@
 								maxlength="100">
 						</div>
 
+						<!-- Empresa -->
+						<div class="form-group">
+							<label for="company" class="required">
+								Empresa
+							</label>
+							<input type="text" id="company" name="company" placeholder="Nome da sua empresa" required
+								maxlength="100">
+						</div>
+
+						<!-- Número de Funcionários -->
+						<div class="form-group">
+							<label for="employee_count" class="required">
+								Número de Funcionários
+							</label>
+							<select id="employee_count" name="employee_count" required>
+								<option value="">Selecione</option>
+								<option value="1-10">1-10 funcionários</option>
+								<option value="11-50">11-50 funcionários</option>
+								<option value="51-200">51-200 funcionários</option>
+								<option value="201-500">201-500 funcionários</option>
+								<option value="500+">Mais de 500 funcionários</option>
+							</select>
+						</div>
+
+						<!-- Setor -->
+						<div class="form-group">
+							<label for="industry" class="required">
+								Setor de Atuação
+							</label>
+							<select id="industry" name="industry" required>
+								<option value="">Selecione</option>
+								<option value="Alimentação">Alimentação</option>
+								<option value="Automotivo">Automotivo</option>
+								<option value="Beleza e Estética">Beleza e Estética</option>
+								<option value="Construção">Construção</option>
+								<option value="Educação">Educação</option>
+								<option value="Eletrônicos">Eletrônicos</option>
+								<option value="Farmácia">Farmácia</option>
+								<option value="Moda e Vestuário">Moda e Vestuário</option>
+								<option value="Saúde">Saúde</option>
+								<option value="Serviços">Serviços</option>
+								<option value="Supermercado">Supermercado</option>
+								<option value="Tecnologia">Tecnologia</option>
+								<option value="Turismo">Turismo</option>
+								<option value="Outro">Outro</option>
+							</select>
+						</div>
+
+						<!-- Tipo de Projeto -->
+						<div class="form-group">
+							<label for="project_type" class="required">
+								Como podemos ajudar?
+							</label>
+							<select id="project_type" name="project_type" required>
+								<option value="">Selecione</option>
+								<option value="Implementar Voltz na região">Implementar Voltz na minha região</option>
+								<option value="Informações comerciais">Informações comerciais</option>
+								<option value="Parceria">Parceria</option>
+								<option value="Suporte técnico">Suporte técnico</option>
+								<option value="Outro">Outro</option>
+							</select>
+						</div>
+
 						<!-- Celular -->
 						<div class="form-group">
-							<label for="celular" class="required">
+							<label for="phone" class="required">
 								Celular
 							</label>
-							<input type="tel" id="celular" name="celular" placeholder="(11) 99999-9999" required
+							<input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required
 								maxlength="15">
 						</div>
 

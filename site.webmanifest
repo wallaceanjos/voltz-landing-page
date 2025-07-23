@@ -1,0 +1,26 @@
+{
+    "name": "Voltz - Impulsione o comércio local",
+    "short_name": "Voltz",
+    "description": "Impulsione o comércio local com a Voltz. Descontos, prêmios, clientes fiéis e mais vendas para seu negócio.",
+    "icons": [
+        {
+            "src": "./assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00ffaa",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "./index.html",
+    "scope": "./",
+    "lang": "pt-BR",
+    "dir": "ltr",
+    "categories": ["business", "shopping", "finance"]
+}
