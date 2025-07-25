@@ -37,6 +37,7 @@ function initModal() {
                 first_name: formData.get('first_name'),
                 last_name: formData.get('last_name'),
                 email: formData.get('email'),
+                cep: formData.get('cep'),
                 phone: formData.get('phone')
             };
 

@@ -88,6 +88,7 @@ https://yuwdzuuos4r7wwz3lm6nipmrpu0opiza.lambda-url.us-east-2.on.aws/
 - `employee_count` - Número de funcionários
 - `industry` - Setor de atuação
 - `project_type` - Como podemos ajudar
+- `cep` - CEP
 - `phone` - Telefone
 
 ## 🚫 CORS - Desenvolvimento Local
